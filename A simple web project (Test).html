@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anachuri Official Site Web</title>
+		
+		<header>
+		<marquee class="Texto-Rondante">¡¡¡BIENVENIDO A MÍ CURRICULUM VITAE EN HTML!!!</marquee>
+			<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+			<div class="Encabezado">
+			<img src="https://img1.picmix.com/output/stamp/normal/2/2/0/8/1658022_47ee0.gif" alt="Izquierda">
+				<h3><p>Anachuri, Juán Gastón</p></h3>
+			<img src="https://img1.picmix.com/output/stamp/normal/2/2/0/8/1658022_47ee0.gif" alt="Derecha">
+			</div>
+			</header>
+		
+		<style>
+			body {
+			background-image: url('https://image.freepik.com/free-photo/black-stone-brick-wall-texture_35956-3286.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+			margin: 0;
+		}
+		
+		.Foto-de-Perfil {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			height: 100vh;
+			margin: 0;
+		}
+		
+		.Encabezado {
+			font-family: MedievalSharp; Cursive;
+			text-align: center;
+			font-size: 40px;
+			text-shadow: 8px 8px 8px #000000;
+			color: #fa0909;
+			font-weight: bold;
+		}	
+		
+		.Encabezado{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px; 
+		}
+
+		.Encabezado img {
+			width: 170px; 
+			height: auto;
+		}
+		
+		.Texto-Rondante {
+			font-family: MedievalSharp; Cursive;
+			color: #64f;
+			background: none;
+			font-size: 40px;
+			text-shadow: 2px 2px 0 #ff0,
+						 4px 4px 0 #0cc,
+						 6px 6px 0 #E30;
+}
+		.contenedor {
+			font-family: MedievalSharp; Cursive;
+			color: #fa0909;
+			font-size: 20px;
+			max-width: 800px;
+			margin: 20px auto;
+			padding: 20px;
+			background: rgba(0, 0, 0, 0.8);
+			border: 5px ridge #fbec0e;
+		}
+		
+		.section {
+			margin-bottom: 30px;
+		}
+
+		ul {
+			list-style: square;
+			padding-left: 20px;
+		}
+
+		footer {
+			text-align: center;
+			margin-top: 40px;
+			font-size: 10px;
+			color: #ffccff;
+		}
+		
+		.imagenes-perfil {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			margin-bottom: 20px;
+		}
+
+		.Skulss img {
+			width: 150px;
+			height: 150px;
+		}
+
+		.perfil-central {
+			width: 400px;
+			height: 400px;
+		}
+		
+		.cabeza-baile {
+			width: 700px;
+			height: 700px;
+			background-image: url('2.png'); /* reemplaza con tu imagen */
+			background-size: cover;
+			border-radius:;
+			animation: bailar 1s infinite ease-in-out, cambiarColor 2s infinite linear;
+			margin: 0 auto;
+			box-shadow: ;
+		}
+
+/* Animación de "baile" */
+		@keyframes bailar {
+			0%, 100% { transform: rotate(0deg) translateY(0); }
+			25% { transform: rotate(10deg) translateY(-5px); }
+			50% { transform: rotate(0deg) translateY(0); }
+			75% { transform: rotate(-10deg) translateY(-5px); }
+		}
+
+/* Cambio de color (filtro de tonalidad) */
+		@keyframes cambiarColor {
+			0% { filter: hue-rotate(0deg); }
+			100% { filter: hue-rotate(360deg); }
+		}
+	
+		.reproductor {
+			background: url('https://i.pinimg.com/originals/e0/2a/63/e02a63a5c4775e9a0497e5cc99ce91f5.jpg'); /* textura pergamino */
+			background-size: cover;
+			border: 5px solid #5c3b1b;
+			border-radius: 20px;
+			box-shadow: 0 0 20px #000;
+			padding: 30px;
+			width: 350px;
+			text-align: center;
+			color: #2e1a09;
+			margin: 0 auto;
+		}
+
+		.botones button {
+			background: #7b5225;
+			border: 2px solid #3b210a;
+			color: #f3e1b6;
+			padding: 10px 20px;
+			margin: 5px;
+			border-radius: 6px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: transform 0.2s;
+		}
+
+		.botones button:hover {
+			transform: scale(1.05);
+			background: #a06b32;
+		}
+
+		.barra-progreso {
+			margin-top: 15px;
+		}
+
+		input[type="range"] {
+			width: 100%;
+			accent-color: #7b5225;
+		}
+
+		.Chuno {
+			display: flex;
+			justify-content: center; 
+			align-items: center;     
+			height: 100vh;
+		}
+</style>
+	</head>
+	
+		<body>
+	<div class="reproductor">	
+		
+		<audio id="audio">
+			<source src="file:///C:/Users/Usuario/Desktop/Daft%20Punk%20vs.%20Kavinsky%20-%20Nightcall%20After%20All%20(Maximum%20Love%20Remix).mp3" type="audio/mp3">
+		</audio>
+
+    <div class="botones">
+      <button onclick="document.getElementById('audio').play()">▶️</button>
+      <button onclick="document.getElementById('audio').pause()">⏸️</button>
+    </div>
+
+    <input type="range" id="barra" class="barra-progreso" value="0">
+    </div>
+	
+	<script>
+    const audio = document.getElementById('audio');
+    const barra = document.getElementById('barra');
+
+    audio.ontimeupdate = () => {
+      barra.value = (audio.currentTime / audio.duration) * 100 || 0;
+    };
+
+    barra.addEventListener("input", () => {
+      audio.currentTime = (barra.value / 100) * audio.duration;
+    });
+	</script>
+	
+	<div class="contenedor">
+		
+		<div class="Skulls">
+      <img src="https://i.imgur.com/fSNZScl.gif" alt="Imagen lateral izquierda">
+      <img src="https://freeimghost.net/images/2025/06/13/Profile-Fixed.png" alt="Foto de perfil" class="perfil-central">
+      <img src="https://i.imgur.com/fSNZScl.gif" alt="Imagen lateral derecha">
+    </div>
+	
+		<h1>Datos de Contacto</h1>
+		<p>E-mail: Anachurigt122@gmail.com | Telefono Celular: +543873300031</p>
+		
+		<div class="section">
+      <h2>Sobre Mí</h2>
+      <p>Soy un chico de 17 años</p>
+    </div>
+
+    <div class="section">
+      <h2>Experiencia Laboral</h2>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Formación Academica</h2>
+      <ul>
+        <li></li>
+		<li></li>
+		<li></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Habilidades</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <footer>
+      Powered by Pikirenda INC.
+    </footer>
+		
+</div>
+	<div class="Chuno">
+	<img class="cabeza-baile" src="2.png" alt="El-Vago-De-Mosconi">
+	</div>
+		</body>
+		
+</html>
